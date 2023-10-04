@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_XMM5YETKEDy0Xt8wrg7Xiw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_skFAcETLEDy0Xt8wrg7Xiw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_travellerItem" structureRef="org.acme.travel.Traveller"/>
   <bpmn2:itemDefinition id="__0E0784C3-1BEC-4A51-A5E6-D7E5DA3A4402_eventInputXItem" structureRef="org.acme.travel.Traveller"/>
   <bpmn2:itemDefinition id="processedtravellersType" structureRef="org.acme.travel.Traveller"/>
@@ -11,12 +11,12 @@
   <bpmn2:itemDefinition id="__60FA6326-76DC-4DB2-AB06-DB8AC8EE8DC8_travellerOutputXItem" structureRef="org.acme.travel.Traveller"/>
   <bpmn2:itemDefinition id="__8BEA9396-93DE-4D44-8CE2-4A146464264E_eventOutputXItem" structureRef="org.acme.travel.Traveller"/>
   <bpmn2:itemDefinition id="travellersType" structureRef="org.acme.travel.Traveller"/>
-  <bpmn2:itemDefinition id="_F5313189-22B0-4DF3-AD68-9B06B525DA63" structureRef=""/>
-  <bpmn2:itemDefinition id="_86BF0A86-9F83-4BAB-83C5-959DA2AD46BE" structureRef=""/>
-  <bpmn2:message id="_XMOHgETKEDy0Xt8wrg7Xiw" itemRef="processedtravellersType" name="processedtravellers"/>
-  <bpmn2:message id="_XMOHgUTKEDy0Xt8wrg7Xiw" itemRef="travellersType" name="travellers"/>
-  <bpmn2:collaboration id="_E911BE2D-2707-4BA9-B1C5-023FA25E1783" name="Default Collaboration">
-    <bpmn2:participant id="_6738783F-73B0-49F6-B766-49475052A968" name="Pool Participant" processRef="Travelers"/>
+  <bpmn2:itemDefinition id="_8774DF55-133F-4DC4-902E-0E99085E459A" structureRef=""/>
+  <bpmn2:itemDefinition id="_36F46A58-0082-41A2-97A1-518B74C87011" structureRef=""/>
+  <bpmn2:message id="_skGOkETLEDy0Xt8wrg7Xiw" itemRef="processedtravellersType" name="processedtravellers"/>
+  <bpmn2:message id="_skG1oETLEDy0Xt8wrg7Xiw" itemRef="travellersType" name="travellers"/>
+  <bpmn2:collaboration id="_A13DC97A-D94A-44A5-BBC6-B01E11C7C4A3" name="Default Collaboration">
+    <bpmn2:participant id="_BDF1E19E-F7C2-4794-83A4-A401D31DD871" name="Pool Participant" processRef="Travelers"/>
   </bpmn2:collaboration>
   <bpmn2:process id="Travelers" drools:packageName="org.kie.kogito.test" drools:version="1.0" drools:adHoc="false" name="Process travelers" isExecutable="true" processType="Public">
     <bpmn2:property id="traveller" itemSubjectRef="_travellerItem" name="traveller"/>
@@ -102,7 +102,7 @@
       <bpmn2:outputSet>
         <bpmn2:dataOutputRefs>_8BEA9396-93DE-4D44-8CE2-4A146464264E_eventOutputX</bpmn2:dataOutputRefs>
       </bpmn2:outputSet>
-      <bpmn2:messageEventDefinition drools:msgref="travellers" messageRef="_XMOHgUTKEDy0Xt8wrg7Xiw"/>
+      <bpmn2:messageEventDefinition drools:msgref="travellers" messageRef="_skG1oETLEDy0Xt8wrg7Xiw"/>
     </bpmn2:startEvent>
     <bpmn2:businessRuleTask id="_60FA6326-76DC-4DB2-AB06-DB8AC8EE8DC8" drools:ruleFlowGroup="travellers" name="Process Traveler" implementation="http://www.jboss.org/drools/rule">
       <bpmn2:extensionElements>
@@ -168,7 +168,7 @@
       <bpmn2:inputSet>
         <bpmn2:dataInputRefs>_0E0784C3-1BEC-4A51-A5E6-D7E5DA3A4402_eventInputX</bpmn2:dataInputRefs>
       </bpmn2:inputSet>
-      <bpmn2:messageEventDefinition drools:msgref="processedtravellers" messageRef="_XMOHgETKEDy0Xt8wrg7Xiw"/>
+      <bpmn2:messageEventDefinition drools:msgref="processedtravellers" messageRef="_skGOkETLEDy0Xt8wrg7Xiw"/>
     </bpmn2:endEvent>
   </bpmn2:process>
   <bpmndi:BPMNDiagram>
@@ -289,7 +289,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_XMM5YETKEDy0Xt8wrg7Xiw</bpmn2:source>
-    <bpmn2:target>_XMM5YETKEDy0Xt8wrg7Xiw</bpmn2:target>
+    <bpmn2:source>_skFAcETLEDy0Xt8wrg7Xiw</bpmn2:source>
+    <bpmn2:target>_skFAcETLEDy0Xt8wrg7Xiw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
